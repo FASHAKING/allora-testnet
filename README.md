@@ -320,7 +320,8 @@ To save: CTRL+X+Y Enter
 
 ## Run worker
 ```console
-docker compose up -d --build
+docker compose build
+docker compose up -d
 ```
 
 ## Check your node status
@@ -349,7 +350,7 @@ curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Conte
     "function_id": "bafybeigpiwl3o73zvvl6dxdqu7zqcub5mhg65jiky2xqb4rdhfmikswzqm",
     "method": "allora-inference-function.wasm",
     "parameters": null,
-    "topic": "allora-topic-1-worker",
+    "topic": "1",
     "config": {
         "env_vars": [
             {
@@ -378,7 +379,7 @@ curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Conte
     "function_id": "bafybeigpiwl3o73zvvl6dxdqu7zqcub5mhg65jiky2xqb4rdhfmikswzqm",
     "method": "allora-inference-function.wasm",
     "parameters": null,
-    "topic": "allora-topic-2-worker",
+    "topic": "2",
     "config": {
         "env_vars": [
             {
@@ -449,7 +450,7 @@ docker ps
 ```
 
 
-Congratz. Worker is working safely but currently I am not sure that I have done it completely correct as the point system seems to be buggy. I'll update here and on my twitter [0xMoei](https://twitter.com/0xMoei)
+
 
 
 ### 🚨Error 408: when checking topic status
